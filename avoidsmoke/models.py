@@ -5,7 +5,7 @@ class Content(models.Model):
     description=models.TextField(_(""))
 
     def __str__(self):
-        pass
+        return str(self.title)+"<br>"+str(self.description)
 
     class Meta:
         db_table = ''
