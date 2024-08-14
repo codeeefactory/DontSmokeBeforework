@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-f4_i^i@^hu%xt)iz0#qg*0_l%eh^+^!!4)=&a-vzx$2#fjio_0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["dontsmokebeforeanswer.ir","localhost","127.0.0.1"]
+ALLOWED_HOSTS = ["dontsmoke.ir","localhost","127.0.0.1"]
 
 
 # Application definition
@@ -36,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'avoidsmoke',
     'django.contrib.staticfiles',
+    "avoidsmoke",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -117,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = '/static/' 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

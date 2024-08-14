@@ -1,63 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            background-color: lightblue;
-            }
-        p,h1{
-            font: optional;
-            text-align: center;   
-        }
-        section { height: 100vh; }
-        .tag {
-            opacity: 0;
-            transform: translate(0, 10vh);
-            transition: all 1s;
-          }
-          .tag.visible {
-            opacity: 1;
-            transform: translate(0, 0);
-          }
-          .yellow { background-color: lightyellow; }
-.red { background-color: lightcoral; }
-.blue { background-color: lightblue; }
-.green { background-color: lightgreen; }
-
-          
-    </style>
-    <script>
-        $(document).on("scroll", function() {
-            var pageTop = $(document).scrollTop();
-            var pageBottom = pageTop + $(window).height();
-            var tags = $(".tag");
-          
-            for (var i = 0; i < tags.length; i++) {
-              var tag = tags[i];
-              if ($(tag).position().top < pageBottom) {
-                $(tag).addClass("visible");
-              } else {
-                $(tag).removeClass("visible");
-              }
-            }
-          });
-          
-          
-    </script>
-    <title>مصرف نکن</title>
-    {% if nakesh %}
-    {% for advise in nakesh %} 
-    <section class="yellow"><h1>foobar</h1></section>
-<section class="tag red"><h1>foobar</h1></section>
-<section class="tag blue"><h1>foobar</h1></section>
-<section class="tag green"><h1>foobar</h1></section>
-
-
+    <title>Advising Website</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
+    <div id="loader" class="loader"></div>
+    <div id="content" style="display:none;">
+        <header>
+            <h1>Welcome to the Advising Website</h1>
+            <nav>
+                <a href="#advice">Advice</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="advice">
+            <h2>Advice Section</h2>
+            <p>Here we advise you on what not to do...</p>
+        </section>
+
+        <footer>
+            <p>Contact us at: advice@example.com</p>
+        </footer>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
 </body>
-{% endfor %}
-{% endif %}
 </html>
