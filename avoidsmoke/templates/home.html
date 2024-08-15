@@ -1,11 +1,12 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advising Website</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.8.2/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.8.2/core.js"></script>
 </head>
 <body>
     <div id="loader" class="loader"></div>
@@ -19,14 +20,15 @@
         </header>
 
         <section id="advice">
-            <h2>Advice Section</h2>
-            <p>Here we advise you on what not to do...</p>
+           <py-script>
+            print("ijhsij")
+           </py-script>
         </section>
 
         <footer>
             <p>Contact us at: advice@example.com</p>
         </footer>
     </div>
-    <script src="{% static 'script.js' %}"></script>
+    <script src="script.js"></script>
 </body>
 </html>
