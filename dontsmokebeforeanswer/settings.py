@@ -26,9 +26,7 @@ SECRET_KEY = 'django-insecure-f4_i^i@^hu%xt)iz0#qg*0_l%eh^+^!!4)=&a-vzx$2#fjio_0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["dontsmoke.ir","localhost","127.0.0.1"]
-
-
+ALLOWED_HOSTS = ["dontsmoke.ir","localhost","127.0.0.1","192.168.1.181"]
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "avoidsmoke",
-    "rest_framework",
+    #"rest_framework",
 ]
 
 MIDDLEWARE = [
