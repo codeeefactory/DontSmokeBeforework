@@ -9,8 +9,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <title>تماس با ما</title>
   <body style="background-image: url("{% static 'image/annie-spratt-goholCAVTRs-unsplash.jpg' %}")">
-    <a href="mailto:amirsajjad.rz@gmail.com" class="btn btn-info btn-lg">
+    <a href="mailto:sajjad.rgz@gmail.com" class="btn btn-info btn-lg">
       <span class="glyphicon glyphicon-envelope"></span> ایمیل به نویسنده
+      </a>
+      <form method="post">
+        {% csrf_token %}
+        {{contact.as_p}}
+
+      </form>
   
 </body>
 </html>
