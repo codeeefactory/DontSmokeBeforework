@@ -43,7 +43,7 @@ def Call(request):
            form.save()
    
     context['contact']=form
-    return render(request, 'Call.html', context)
+    return render(request, 'call.html', context)
 
 def About(request):
 	return render(request,'About.html')

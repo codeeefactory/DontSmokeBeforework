@@ -122,3 +122,10 @@ STATIC_ROOT = '/static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.c1.liara.email"
+EMAIL_PORT=587
+EMAIL_HOST_USER="fervent_payne_shsk7m"
+EMAIL_HOST_PASSWORD="d7e6f9c4-b61c-41f3-9ea4-1562599f81db"
+EMAIL_USE_TLS=True
